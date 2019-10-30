@@ -20,8 +20,6 @@ public class XmlDocClass {
 
     public XmlDocClass(){
         dbFactory = DocumentBuilderFactory.newInstance();
-        /*dBuilder = dbFactory.newDocumentBuilder();
-        doc = dBuilder.newDocument();*/
     }
     public void saveSession(String path, List<Film> filmList){
 
@@ -77,9 +75,11 @@ public class XmlDocClass {
             e.printStackTrace();
         }
     }
+    //Метод не работает. "doc" всегда null и не парсирует файл, который создался в "saveSession" 
     public List<Film> startSession(String path/*File input*/){
         try{
             dBuilder = dbFactory.newDocumentBuilder();
+            
             //StringBuilder xmlStringBuilder = new StringBuilder(); //(input);
             //xmlStringBuilder.append(path);
             //ByteArrayInputStream inputStream = new ByteArrayInputStream(xmlStringBuilder.toString().getBytes("UTF-8"));
@@ -90,9 +90,10 @@ public class XmlDocClass {
             /*StringReader sReader = new StringReader(path);
             InputSource inputSource = new InputSource(sReader);
             Document doc = dBuilder.parse(inputSource);*/
+            
             Document doc = dBuilder.parse(new File(path));
             NodeList nodeList = doc.getElementsByTagName("FilmDatabase");
-            /*List<Film>*/ filmList = new ArrayList<Film>(nodeList.getLength());
+            filmList = new ArrayList<Film>(nodeList.getLength());
             for(int i = 0; i<nodeList.getLength();i++){
                 Node nNode = nodeList.item(i);
                 filmList.add(new Film());
