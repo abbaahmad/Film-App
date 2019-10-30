@@ -17,30 +17,26 @@ public class Review {
 
     public void setCreatedOn(Calendar value)
     {
-        /*if (value != 0.0) */this.createdOn = value;
-        //else this.rating = "";
+        this.createdOn = value;
     }
 
-    public /*Users*/ String getCreatedBy() { return this.createdBy; }
+    public String getCreatedBy() { return this.createdBy; }
 
     public void setCreatedBy(String value)
     {
-        /*if (value != 0.0) */this.createdBy = value;
-        //else this.rating = "";
+        this.createdBy = value;
     }
     public float getUserRating() { return this.userRating; }
 
     public void setUserRating(float value)
     {
-        /*if (value != 0.0) */this.userRating = value;
-        //else this.rating = "";
+        this.userRating = value;
     }
     public String getReview() { return this.review; }
 
     public void setReview(String value)
     {
-        /*if (value != 0.0) */this.review = value;
-        //else this.rating = "";
+        this.review = value;
     }
 
 }
