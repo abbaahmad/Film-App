@@ -12,7 +12,6 @@ public class FilmDatabase {
     List<Review> reviewList;
     XmlDocClass xmlDoc;
 
-    //public List<Film> getFilm_list(){return film_list;}
     public FilmDatabase(){
         filmList = new ArrayList<Film>();
         selectedFilm = new Film();
@@ -71,22 +70,10 @@ public class FilmDatabase {
         File film_file = new File(path);
         if(!film_file.isFile()) return;
         filmList.clear();
-        filmList = xmlDoc.startSession(/*film_file); /*/path);
-        /*try(FileWriter filewriter = new FileWriter(path))*/
+        filmList = xmlDoc.startSession(path);
     }
     public void saveData(String path){
-        /*File film_file = new File(path);
-        if(!film_file.isFile()){
-            try {
-                film_file.createNewFile();
-            }
-            catch (IOException e){
-                e.printStackTrace();
-            }
-            //xmlDoc.saveSession(film_file.getAbsolutePath(),film_list);
-        }
-        //else*/
-            xmlDoc.saveSession(path, filmList);
+         xmlDoc.saveSession(path, filmList);
     }
     public void removeByName(String fName){
         selectedFilm = searchByName(fName);
