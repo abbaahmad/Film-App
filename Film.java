@@ -17,55 +17,48 @@ public class Film {
 
     public void setImdbId(String value)
     {
-        /*if (value != null)*/ this.imdbId = value;
-        //else this.imdb_id = "";
+        this.imdbId = value;
     }
 
     public String getFilmType() { return this.filmType; }
 
     public void setFilmType(String value)
     {
-        /*if (value != null) */this.filmType = value;
-        //else this.imdb_id = "";
+        this.filmType = value;
     }
 
     public String getName() { return this.name; }
 
     public void setName(String value)
     {
-        /*if (value != null) */this.name = value;
-        //else this.name = "";
+        this.name = value;
     }
 
     public String getGenre() { return this.genre; }
 
     public void setGenre(String value)
     {
-        /*if (value != null) */this.genre = value;
-        //else this.genre = "";
-    }
+        this.genre = value;
+     }
 
     public String getDescription() { return this.description; }
 
     public void setDescription(String value)
     {
-        /*if (value != null) */this.description = value;
-        //else this.description = "";
+       this.description = value;
     }
     public double getRating() { return this.rating; }
 
     public void setRating(double value)
     {
-        /*if (value != 0.0) */this.rating = value;
-        //else this.rating = "";
+        this.rating = value;
     }
 
     public Date getReleaseDate() { return this.releaseDate; }
 
     public void setReleaseDate(Date value)
     {
-        /*if (value != 0.0) */this.releaseDate = value;
-        //else this.rating = "";
+        this.releaseDate = value;
     }
     public void addNewFilm(String fName, String fId, String fType, String fGenre, Date fDate,
                            double fRating, String fDescription){
