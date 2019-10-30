@@ -29,30 +29,6 @@ public class UserPage {
     public Film search(String stringParam){
         return filmDatabase.search(stringParam);
     }
-    /*public Film searchFilm(String fId){
-       return filmDatabase.searchById(fId);
-    }
-    public Film searchFilm(String fType){
-       return filmDatabase.searchByType(fType);
-    }
-    public Film searchFilmByGenre(String fGenre){
-        return filmDatabase.searchByGenre(fGenre);
-    }
-    public Film searchFilmByReleaseDate(Date fDate){
-        return filmDatabase.searchByReleaseDate(fDate);
-    }
-    public Film searchFilmByRating(float fRating){
-        return filmDatabase.searchByRating(fRating);
-    }
-    public Film searchFilmByDescription(String fDescription){
-        return filmDatabase.searchByDescription(fDescription);
-    }*/
-    /*public Film searchFilmByReview(String fReveiw){     //a little tricky to pull off though
-        return filmDatabase.searchByGenre(fReveiw);
-    }
-    private Review searchFilmReview(String fId){
-        return filmDatabase.searchForReview(fId);
-    }*/
     public List<Film> viewFilms(){
         return filmDatabase.viewFilms();
     }
