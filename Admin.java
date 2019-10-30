@@ -34,10 +34,7 @@ public class Admin extends User {
         if(fDescription != null)
             filmDatabase.removeByDescription(fDescription);
     }
-    //public void addUser(String name,String login, String password){
-        //add user
-      //  this.login.addUser(name,login,password);
-    //}
+    
     public void addReview(String fName,String newReview){
         //add review
         filmDatabase.addReview(fName,newReview,"Admin");
