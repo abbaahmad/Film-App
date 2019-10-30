@@ -6,17 +6,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        //FilmDatabase filmDatabase = new FilmDatabase();
-    	// write your code here
-        //filmDatabase.addFilm("RED","red2012","Action","Action,thriller",new Date(2019,10,30), 7.0,"Has bruce willis and MJP");
-        //String path = "C:\\Users\\Abba Ahmad\\Desktop\\JavaProjects\\FilmDir\\FilmDatabase.xml";
+        // write your code here
         Login loginPage = new Login();
         UserPage userPage = new UserPage();
         boolean correctLogin = false;
         String abspath = FileSystems.getDefault().getPath(".").toAbsolutePath().toString();
         String path = abspath + "\\FilmDatabase.xml";
-        //filmDatabase.saveData(path);
-        //filmDatabase.loadData(path);
         System.out.println("Choose an option please: ");
         System.out.println("1 - Login as User\n 2 - Login as Admin\n 3 - Sign Up\n");
         Scanner in = new Scanner(System.in);
